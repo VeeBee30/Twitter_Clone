@@ -1,0 +1,29 @@
+<div class="signupBox container">
+    <div class="container" style="display: flex;justify-content:center">
+
+    <img src="/Images/twitterLogo.png" alt="" style="width: 60px; height:60px" >
+    </div>
+    <div class="container" style="display: flex;justify-content:center">
+
+    <h2>Sign in to Twitter</h2>
+    </div>
+    <div class="container">
+
+<form action="/newuser" method="post" style="display: flex;justify-content:center;flex-direction:column">
+    
+    <label for="name">Your Name</label><br>
+<input type="text" id="name" name="name" placeholder="Name" class="my-2" required><br>
+    <label for="username">Create Your Username</label><br>
+<input type="text" id="username" name="username" placeholder="Username" class="my-2" required><br>
+    <label for="password">Create Your Password</label><br>
+<input type="password" id="password" name="password" minlength="5" placeholder="Password" class="my-2" required><br>
+    <button type="submit" class="signupBtn">Sign Up</button> 
+    </form>
+    </div>
+    <div class="signupBtnCont" style="display: flex;justify-content:center">
+        <form action="/login" method="get" style="display: flex;flex-direction:column;align-items: center;">
+        <h6>Existing User?</h6>
+        <button type="submit" class="signinBtn">Sign In</button>
+        </form>
+    </div>
+</div>

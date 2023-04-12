@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/trending.css">
+    {{!-- <link rel="stylesheet" href="css/home.css"> --}}
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/tweetBoxes.css">
+    <link rel="stylesheet" href="/css/profile.css">
+
+</head>
+
+<body>
+    
+    <div class="container navCont">
+    {{> navbar}}
+
+    </div>
+
+    <div class="container" style="display: flex;">
+    <div class="container main my-2">
+            {{> sidebar}}
+        
+
+       
+
+        <div class="container homeCont">
+           <div class="container tweetBox">
+            <div class="container imageCont">
+                <form action="/profile/{{username}}" method="get">
+                <button type="submit" class="profileBtn">
+
+                <img src={{user.userimage}} alt="" id="profImg">
+                </button>
+
+                </form>
+            </div>
+            <div class="container writingArea">
+
+                <form action="/addtweet/{{username}}/{{user.name}}" method="post">
+
+                <div class="textArea container">
+                    <textarea name="description" id="tweetDesc" cols="45" rows="2" placeholder="Whats Happening?" style="border: none;"></textarea><hr class="hr">
+                </div>
+                <div class="buttonsArea container">
+                    <div class="container buttons">
+                    <button class="tweetBtns"><i class="bi bi-image " style="color: #52b3f4;"></i></button>
+                    <button class="tweetBtns"><i class="bi bi-filetype-gif" style="color: #52b3f4;"></i></button>
+                    <button class="tweetBtns"><i class="fa-solid fa-square-poll-vertical" style="color: #52b3f4;"></i></button>
+                    <button class="tweetBtns"><i class="bi bi-emoji-smile" style="color: #52b3f4;"></i></button>
+                    <button class="tweetBtns"><i class="fa-solid fa-calendar-days" style="color: #52b3f4;"></i></button>
+                    <button class="tweetBtns"><i class="bi bi-geo-alt" style="color: #8fcdf8;"></i></button>
+
+                    </div>
+                    <div class="tweetBtnCont">
+
+                        
+
+                        <button type="submit" class="tweetBtn">Tweet</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+           </div><hr class="hr">
+            
+            {{!-- Setting up tweet boxes --}}
+           {{> tweetBoxes}}
+        </div>
+        <div class="container asideCont">
+            
+            {{> trending}}
+        </div>
+    </div>
+
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/7e03a86024.js" crossorigin="anonymous"></script>
+<script src="/js/script.js"></script>
+</html>

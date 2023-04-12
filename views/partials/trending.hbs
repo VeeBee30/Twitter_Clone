@@ -1,0 +1,53 @@
+<div class="box">
+       <h1> What's happening</h1>
+
+        <p style="margin: 0%;">Trending in India </p>
+        <p style="margin: 0%;"><strong>#delhiwinters</strong> </p>
+        <p style="margin: 0%;">Trending with #delhifog </p>
+
+        <p style="margin-bottom: 0;">Sports . Trending </p>
+        <p style="margin: 0%;"><strong>Stephen Curry</strong> </p>
+        <p style="margin: 0%;">19.7K Tweets </p>
+
+        <p style="margin-bottom: 0;">Entertainment . Trending</p> 
+        <p style="margin: 0%;"><strong>Avneet Kaur </strong></p>
+        <p style="margin: 0%;">5,353 Tweets </p>
+
+        <p style="margin-bottom: 0%;">Politics . Trending </p>
+        <p style="margin: 0%;"><strong>#GetOutRavi</strong> </p> 
+        <p style="margin: 0%;">Trending with #MKStalin</p>
+
+        <p style="margin-bottom: 0%;">Trending</p>
+        <p style="margin: 0%;"><strong>Air India</strong></p> 
+        <p style="margin: 0%;">2,306 Tweets </p>
+        <p>Show More</p>
+        
+    </div>
+
+    <div class="followbox">
+        <h1>Who to follow</h1>
+        {{#each userstofollow}}
+        <form action="/profile/{{this.username}}" method="get">
+        <div class="boxProfile">
+            <div class="picProfile">
+                <button type="submit" id="diffUserImgBtn">
+                <img src="{{this.userimage}}" alt="" style="height: 40px; width: 40px;" style="border-radius: 50%;">
+
+                </button>
+            </div>
+            <div class="twitterProfile">
+                <span>{{this.name}}</span> <br>
+                <span>@{{this.username}}</span>
+            </div>
+            <div class="followProfile">
+                <button type="button" style="background-color: #0F1419; height: 40px; width: 80px; border-radius: 23px; border: 0px; color: white;">Follow</button>
+            </div>
+        </div>
+        </form>
+        {{/each}}
+
+        
+
+        
+        <p>Show More</p>
+    </div>

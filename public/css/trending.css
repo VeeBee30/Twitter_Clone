@@ -1,0 +1,57 @@
+.box{
+    background-color: #f7f9f9;
+    width: 100%;
+    height: 500px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 23px;
+}
+
+.boxProfile{
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.picProfile{
+    margin: auto;
+    /* display: flex; */
+    /* justify-content:space-around ; */
+}
+#diffUserImgBtn {
+    border: none;
+    background-color: transparent;
+
+}
+#diffUserImgBtn > img {
+    transition: filter 0.5s;
+    border-radius: 50%;
+}
+#diffUserImgBtn > img:hover {
+    filter: brightness(0.8);
+}
+.twitterProfile{
+    margin: auto;
+    /* display: flex; */
+    /* justify-content:space-around ; */
+    
+}
+
+.followProfile{
+    /* display: flex; */
+    margin: auto;
+    /* justify-content: space-around; */
+}
+
+.followbox{
+    height: 100px;
+    width: 100%;
+    height: auto;
+    background-color:#f7f9f9 ;
+    border-radius: 23px;
+    margin: 10px;
+    margin-top: 20px;
+    padding: 10px;
+
+}

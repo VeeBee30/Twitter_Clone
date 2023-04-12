@@ -1,0 +1,59 @@
+
+.sidebarContainer {
+    width: 280px;
+    height: 740px;
+    /* position: fixed; */
+    position: sticky;
+    top: 70px;
+
+}
+
+.TweetBtnLi {
+    display: flex;
+    justify-content: center;
+}
+
+.sidebarLi {
+    width: 60%;
+
+}
+
+.sidebarLi>a {
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+    border-radius: 24px !important;
+    transition: background-color 0.5s;
+}
+
+.sidebarLi>a:hover {
+    background-color: lightgray;
+}
+
+.user>a {
+    border-radius: 24px !important;
+    transition: background-color 0.5s;
+    padding: 10px;
+}
+
+.user>a:hover {
+    background-color: lightgray;
+}
+
+.sidebarTweetBtn {
+    padding: 10px;
+    border-radius: 23px;
+    width: 140px;
+    background-color: #1d9bf0;
+    font-weight: bold;
+    font-size: 17px;
+    letter-spacing: 0.3px;
+}
+
+.sidebarTweetBtn:hover {
+    transition: background-color 0.5s;
+    background-color: #1876b5 !important;
+}
+#logout {
+    cursor: pointer;
+}

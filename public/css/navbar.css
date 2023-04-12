@@ -1,0 +1,18 @@
+.navItems {
+    display: flex !important;
+    justify-content: space-around !important;
+    width:75% ;
+}
+.searchIcon {
+    display: flex;
+    align-items: center;
+}
+.searchBox {
+    width: 300px;
+}
+.inputBox {
+    border-radius: 50px;
+    background-color: lightgray;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}

@@ -1,0 +1,46 @@
+{{#if tweets}}
+{{#each tweets}}
+<div class="container tweetBoxes">
+    <div class="userImg container">
+        <form action="#" method="get">
+            
+        <img src="/Images/twitterLogo.png" alt="" width="70px" height="70px">
+
+        </form>
+    </div>
+    <div class="container userCont">
+        <div class="container username">
+
+
+            <span><strong>{{this.name}}</strong></span>&nbsp; <span style="color: gray;font-size: 15px;">@{{this.username}}</span>&nbsp;<span style="color: gray;font-size: 13px;">.{{this.date}}</span> &nbsp;<span><div class="dropdown">
+  <button class="btn btn-secondary " type="button" data-bs-toggle="dropdown" aria-expanded="false" style="height: 10px; width:10px; background-color:white; border:0px white; display:flex; position:relative; left:350px; top:-41px;">
+    <img src="https://static.thenounproject.com/png/658625-200.png" alt="" style="height: 50px; width:50px">
+  </button>
+  <ul class="dropdown-menu" style="border-radius: 13px;">
+    <form action="/deletetweet/{{this._id}}" method="get"><li><button class="dropdown-item" type="submit" style="color: red;"><img src="https://cdn-icons-png.flaticon.com/512/1345/1345874.png" alt="" style="height:14px;width:14px">  Delete</button></li></form>
+    <li><button class="dropdown-item" type="button"><strong><img src="http://cdn.onlinewebfonts.com/svg/img_226200.png" alt="" style="height:14px;width:14px">  Pin to your profile</strong></button></li>
+    <li><button class="dropdown-item" type="button"><img src="https://w7.pngwing.com/pngs/115/685/png-transparent-computer-icons-checklist-icon-design-list-miscellaneous-text-check-mark.png" alt="" style="height:14px;width:14px"><strong>  Add/remove @{{username}} from Lists</strong></button></li>
+    <li><button class="dropdown-item" type="button"><img src="https://www.pngplay.com/wp-content/uploads/7/Chat-Message-Transparent-Free-PNG.png" alt="" style="height:14px;width:14px"><strong>  Change who can reply</strong></button></li>
+    <li><button class="dropdown-item" type="button"><img src="https://png.pngtree.com/png-vector/20220707/ourmid/pngtree-close-html-bracket-embed-code-png-image_5654026.png" alt="" style="height:14px;width:14px"><strong>  Embed Tweet</strong></button></li>
+    <li><button class="dropdown-item" type="button"><img src="https://img.freepik.com/free-icon/graph_318-10306.jpg" alt="" style="height:14px;width:14px"><strong>  View tweet analytics</strong></button></li>
+  </ul>
+</div> </span>
+
+
+        </div>
+        <div class="container tweetShow">
+            <p>{{this.description}}</p>
+        </div>
+        <div class="tweetBtnsCont container">
+            <button class="tweetBtns"><i class="fa-solid fa-chart-simple" ></i></button>
+            <button class="tweetBtns"><i class="fa-regular fa-comment" ></i></button>
+            <button class="tweetBtns"><i class="fa-solid fa-retweet" ></i></button>
+            <button class="tweetBtns"><i class="fa-regular fa-heart" ></i></button>
+            <button class="tweetBtns"><i class="bi bi-upload"></i></button>
+        </div>
+    </div>
+</div><hr class="hr">
+{{/each}}
+{{else}}
+<h5 style="text-align: center;">Write your first tweet</h5>
+{{/if}}
